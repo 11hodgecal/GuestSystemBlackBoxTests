@@ -46,7 +46,7 @@ namespace GuestSystemBlackBoxTests
 
         [Test]
         [Order(2)]
-        public void AdminSeededandLoginWorks()
+        public void AdminSeededandLoginAndWorks()
         {
             //Arrange
             var driver = new ChromeDriver("C:\\Program Files\\Google\\Chrome\\Application");

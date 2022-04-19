@@ -167,6 +167,7 @@ namespace GuestSystemBlackBoxTests
             var Delete2Button = driver.FindElement(By.XPath("/html/body/div/main/div/form/input[2]"));
             Delete2Button.Click();
 
+            //Assert
             try
             {
 
@@ -176,12 +177,9 @@ namespace GuestSystemBlackBoxTests
             catch (Exception)
             {
                 Assert.Pass();
+                driver.Close();
                 
             }
-            //Assert
-            
-
-
         }
     }
 }
