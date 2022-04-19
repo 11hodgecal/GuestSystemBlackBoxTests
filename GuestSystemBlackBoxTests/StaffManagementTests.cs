@@ -172,13 +172,13 @@ namespace GuestSystemBlackBoxTests
             {
 
                 driver.FindElement(By.Id("Test")).FindElement(By.XPath("//td[contains(text(),'Test@Test.com')]"));
+                
 
             }
             catch (Exception)
             {
-                Assert.Pass();
                 driver.Close();
-                
+                Assert.Pass();
             }
         }
     }

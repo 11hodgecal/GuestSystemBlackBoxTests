@@ -154,5 +154,29 @@ namespace GuestSystemBlackBoxTests
                 Assert.Fail("Error not correct");
             }
         }
+        [Test]
+        [Order(6)]
+        public void LogoutWorks()
+        {
+            //Arrange
+            var driver = new ChromeDriver("C:\\Program Files\\Google\\Chrome\\Application");
+            driver.Navigate().GoToUrl("https://localhost:44371/Identity/Account/Login");
+            
+            //Act
+            var username = driver.FindElement(By.XPath("/html/body/div/main/div/div/section/form/div[2]/input"));
+            var pass = driver.FindElement(By.XPath("/html/body/div/main/div/div/section/form/div[3]/input"));
+            username.SendKeys("Admin@admin.com");
+            pass.SendKeys("Admin123!");
+            pass.Submit();
+
+            //Act
+            var logOutnav = driver.FindElement(By.XPath("/html/body/header/nav/div/div/ul[2]/li[4]/form/button"));
+
+            logOutnav.Click();
+            //Assert
+            driver.Close();
+            Assert.Pass();
+            
+        }
     }
 }
