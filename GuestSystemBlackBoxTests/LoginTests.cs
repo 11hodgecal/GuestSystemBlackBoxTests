@@ -52,7 +52,7 @@ namespace GuestSystemBlackBoxTests
             var driver = new ChromeDriver("C:\\Program Files\\Google\\Chrome\\Application");
             driver.Navigate().GoToUrl("https://localhost:44371/Identity/Account/Login");
 
-            var expected = "Hello admin@admin.com!";
+            var expected = "Hello Bob Nobody";
 
             //Act
             var username = driver.FindElement(By.XPath("/html/body/div/main/div/div/section/form/div[2]/input"));
