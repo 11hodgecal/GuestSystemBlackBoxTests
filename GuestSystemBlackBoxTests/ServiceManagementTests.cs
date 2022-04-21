@@ -13,7 +13,7 @@ namespace GuestSystemBlackBoxTests
     {
         [Test]
         [Order(1)]
-        public void LoginNavWorksCorrectly()
+        public void ServiceManagementNavWorksCorrectly()
         {
             //Arrange
             var driver = new ChromeDriver("C:\\Program Files\\Google\\Chrome\\Application");
@@ -52,7 +52,7 @@ namespace GuestSystemBlackBoxTests
         }
         [Test]
         [Order(2)]
-        public void StaffManagementCreateWorksCorrectly()
+        public void ServiceManagementCreateWorksCorrectly()
         {
 
             //Arrange
@@ -88,7 +88,7 @@ namespace GuestSystemBlackBoxTests
         }
         [Test]
         [Order(3)]
-        public void StaffManagementCreateValidationWorksCorrectly()
+        public void ServiceManagementCreateValidationWorksCorrectly()
         {
 
             //Arrange
@@ -130,7 +130,7 @@ namespace GuestSystemBlackBoxTests
         }
         [Test]
         [Order(4)]
-        public void StaffManagementCreateBackWorksCorrectly()
+        public void ServiceManagementCreateBackWorksCorrectly()
         {
 
             //Arrange
@@ -158,7 +158,7 @@ namespace GuestSystemBlackBoxTests
         }
         [Test]
         [Order(5)]
-        public void StaffManagementEditBackWorksCorrectly()
+        public void ServiceManagementEditBackWorksCorrectly()
         {
 
             //Arrange
@@ -189,7 +189,7 @@ namespace GuestSystemBlackBoxTests
         
         [Test]
         [Order(7)]
-        public void StaffManagementDeleteBackWorksCorrectly()
+        public void ServiceManagementDeleteBackWorksCorrectly()
         {
 
             //Arrange
@@ -219,7 +219,7 @@ namespace GuestSystemBlackBoxTests
         }
         [Test]
         [Order(8)]
-        public void StaffManagementDeleteWorksCorrectly()
+        public void ServiceManagementDeleteWorksCorrectly()
         {
 
             //Arrange
