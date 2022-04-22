@@ -178,5 +178,28 @@ namespace GuestSystemBlackBoxTests
             Assert.Pass();
             
         }
+        [Test]
+        [Order(7)]
+        public void SeededCustomerAccountLoginWorks()
+        {
+
+            //Arrange
+            var driver = new ChromeDriver("C:\\Program Files\\Google\\Chrome\\Application");
+            driver.Navigate().GoToUrl("https://localhost:44371/Identity/Account/Login");
+            var expected = "https://localhost:44371/CustomerRoomRequest";
+
+            //Act
+            var username = driver.FindElement(By.XPath("/html/body/div/main/div/div/section/form/div[2]/input"));
+            var pass = driver.FindElement(By.XPath("/html/body/div/main/div/div/section/form/div[3]/input"));
+            username.SendKeys("Test@Test.com");
+            pass.SendKeys("Admin123!");
+            pass.Submit();
+            
+            //assert
+            
+            Assert.AreEqual(expected,driver.Url);
+            driver.Close();
+
+        }
     }
 }
