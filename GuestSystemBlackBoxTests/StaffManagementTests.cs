@@ -67,18 +67,18 @@ namespace GuestSystemBlackBoxTests
             
             driver.Navigate().GoToUrl("https://localhost:44371/User");
             driver.FindElement(By.XPath("/html/body/div/main/p/a")).Click();
-            var expected = "Test@Test.com";
+            var expected = "Test2@Test.com";
 
             //Act
 
             var Email = driver.FindElement(By.XPath("/html/body/div/main/div[1]/div/form/div[1]/input"));
             var Firstname = driver.FindElement(By.XPath("/html/body/div/main/div[1]/div/form/div[2]/input"));
             var Lastname = driver.FindElement(By.XPath("/html/body/div/main/div[1]/div/form/div[3]/input"));
-            Email.SendKeys("Test@Test.com");
-            Firstname.SendKeys("Test");
-            Lastname.SendKeys("Test");
+            Email.SendKeys("Test2@Test.com");
+            Firstname.SendKeys("Test2");
+            Lastname.SendKeys("Test2");
             Lastname.Submit();
-            var Actual = driver.FindElement(By.Id("Test")).FindElement(By.XPath("//td[contains(text(),'Test@Test.com')]")).Text;
+            var Actual = driver.FindElement(By.Id("Test2")).FindElement(By.XPath("//td[contains(text(),'Test2@Test.com')]")).Text;
             
             //Assert
             driver.Close();
@@ -133,7 +133,7 @@ namespace GuestSystemBlackBoxTests
             var expected = "https://localhost:44371/User";
 
             //Act
-            var DeleteButton = driver.FindElement(By.Id("Test")).FindElement(By.XPath("//td//a[contains(text(),'Delete')]"));
+            var DeleteButton = driver.FindElement(By.Id("Test2")).FindElement(By.XPath("//td//a[contains(text(),'Delete')]"));
             DeleteButton.Click();
 
             var BackButton = driver.FindElement(By.XPath("/html/body/div/main/div/form/a"));
@@ -161,7 +161,7 @@ namespace GuestSystemBlackBoxTests
             driver.Navigate().GoToUrl("https://localhost:44371/User");
 
             //Act
-            var DeleteButton = driver.FindElement(By.Id("Test")).FindElement(By.XPath("//td//a[contains(text(),'Delete')]"));
+            var DeleteButton = driver.FindElement(By.Id("Test2")).FindElement(By.XPath("//td//a[contains(text(),'Delete')]"));
             DeleteButton.Click();
 
             var Delete2Button = driver.FindElement(By.XPath("/html/body/div/main/div/form/input[2]"));
